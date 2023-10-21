@@ -1,0 +1,113 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;/*ajusta al 100 de la altura de la pantalla*/
+    background-color: black;
+}
+
+
+.Reloj{
+    width: 590px;
+    height: 590px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/fondo_Reloj.png);
+    background-size: cover;
+    border: 1rem solid darkviolet;
+    border-radius: 50vh;/*Forma circular*/
+    box-shadow: inset 0px 0px 20px 5px;/*3.difuminado la sombra, 4.sombra de forma pareja en todo el contenedor*/
+}
+
+.Reloj::before{
+    content: '';
+    position:absolute;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50vh;/*Forma circular*/
+    z-index: 100;
+}
+
+.hora{
+    width: 190px;
+    height: 190px;
+}
+
+.minuto{
+    width: 270px;
+    height: 270px;
+}
+
+.segundo{
+    width: 290px;
+    height: 290px;
+}
+
+.hora::before{
+    content: '';
+    position: absolute;
+    width: 8px;/*Grosor*/
+    height: 110px;/*Manecilla - largo*/
+    background: mediumorchid;
+    z-index: 10;/*Cuando varios elementos se superponen, los elementos con mayor valor z-index cubren aquellos con menor valor.*/
+    border-radius: 10vh;
+}
+
+.minuto::before{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 155px;
+    background: mediumslateblue;
+    z-index: 9;
+    border-radius: 50vh;
+}
+
+.segundo::before{
+    content: '';
+    position: absolute;
+    width: 1.8px;
+    height: 170px;
+    background: blueviolet;
+    z-index: 12;
+    border-radius: 60vh;
+}
+
+.hora, .minuto, .segundo{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50vh;
+}
+
+.reloj {
+    height: 50px;
+    left: 600px;/*Moverlo a un lado*/
+    position: fixed;
+    top: 420px; /*Moverlo para abajo*/
+    width: 172px;
+    border: white 5px dotted;/*Cuadrado con borde de puntos*/
+    font-family: monospace;/*Tipo de letra */
+    font-size: 2rem;
+    color: darkviolet ;/*Color de hora*/
+    /*width: 200px;/*Tamaño*/
+    /*height: 100px;/*Tamaño*/
+    /*display: flex; /*Ajuste*/
+    /*justify-content: center;
+    align-items: center;*/
+    /*border: darkviolet 5px solid;/*Pasa de cuadrado a circulo*/
+    /*font-family: monospace;/*Tipo de letra */
+    /*font-size: 2rem;
+    color: darkviolet;*/
+
+}
+
+
